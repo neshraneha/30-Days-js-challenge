@@ -1,32 +1,31 @@
-<!-- Task 1: Initialize a new project directory and set up the basic HTML structure for the chat application.
-Task 2: Add a basic CSS file to style the chat application, Including a chat window and input area.
-Task 3: Set up a simple WebSocket server using Node.js and the library. Write a script to create the server and handle connections
-Task 4: Test the WebSocket server by logging messages when clients connect and disconnect.
-Task 5: Add a script to the HTML file to establish a WebSocket connection to the server.
-Task 6: Write functions to handle sending and receiving messages through the WebSocket connection. Log received messages to the console.
-Task 7: Modify the HTML structure to include a chat window and an input area for typing messages. Style the chat window and input area using CSS.
-Task 8: Write a function to display received messages in the chat window. Add event listeners to send messages when the user presses Enter or clicks a send button.
-Task 9: Add user authentication to the chat application. Allow users to enter a username before joining the chat. Display usernames alongside their messages in the chat window.
-Task 10: Add CSS styles to differentiate messeges sent by different users. Add CS5 antimations or transitions to make the chat application more interactive and visually appealing. -->
+<!-- Task 1: Initialize a new project directory and set up the basic HTML structure for the task management app. 
+Task 2: Add a basic CSS file to style the task management app, including a container for displaying tasks and a form for adding new tasks...
+Task 3: Add a form to the HTML structure with fields for entering task details (e.g., title, description, due date). Style the form using C55. 
+Task 4: Write a script to handle form submission, creating a new task object and adding it to an array of tasks. Display the new task in the task liut.
+Task 5: Write a function to iterate over the array of tasks and display each task in the task list include task details like title, description, and due date. 
+Task 6: Style the task list using CSS to make it visually appealing
+Task 7: Add an "Edit" button to each task Item in the task list. Write a function to populate the form with the task detalls when the "Edit" button is clicked 
+Task 8: Write a function to update the task object in the array and refresh the task list display after editing a task.
+Task 9: Add a Delete button to each tash item in the task list. Write a function to remove the task from the array and refresh the task list display when the "Delete" button is clicked.
+Task 10: Add a confirmation dialog before deleting a task to prevent accidental deletions.
+ -->
 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Application</title>
-    <link rel="stylesheet" href="style26.css">
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="chat-container">
-        <input type="text" id="username-input" placeholder="Enter your username...">
-        <div id="chat-window"></div>
-        <div id="input-container">
-            <input type="text" id="message-input" placeholder="Type a message...">
-            <button id="send-button">Send</button>
-        </div>
-    </div>
-    
-    <script src="script26.js"></script>
+    <div id="task-container"></div>
+    <form id="task-form">
+        <input type="text" id="task-title" placeholder="Title">
+        <textarea id="task-description" placeholder="Description"></textarea>
+        <input type="date" id="due-date">
+        <button type="submit">Add Task</button>
+    </form>
+
+    <script src="app.js"></script>
 </body>
 </html>
